@@ -38,11 +38,11 @@
                 },
                 {
                     "name": "",
-                    "id": "e2948d05-ca97-40a0-9c82-2b173c19e713",
-                    "path": "<Keyboard>/s",
+                    "id": "45eb56ec-79a7-49a6-b4ec-95266ee50e52",
+                    "path": "<Keyboard>/w",
                     "interactions": "",
                     "processors": "",
-                    "groups": "keyboard2",
+                    "groups": "",
                     "action": "Jump",
                     "isComposite": false,
                     "isPartOfComposite": false
@@ -60,11 +60,11 @@
                 },
                 {
                     "name": "",
-                    "id": "16f513f1-f11c-4d83-8ed5-84935d03fef0",
-                    "path": "<Keyboard>/w",
+                    "id": "6ef2c81d-aad1-4960-9aa5-f29bd7c68679",
+                    "path": "<Keyboard>/s",
                     "interactions": "",
                     "processors": "",
-                    "groups": "keyboard2",
+                    "groups": "",
                     "action": "crouch",
                     "isComposite": false,
                     "isPartOfComposite": false
@@ -80,17 +80,6 @@
                 {
                     "devicePath": "<Keyboard>",
                     "isOptional": false,
-                    "isOR": false
-                }
-            ]
-        },
-        {
-            "name": "keyboard2",
-            "bindingGroup": "keyboard2",
-            "devices": [
-                {
-                    "devicePath": "<Keyboard>",
-                    "isOptional": true,
                     "isOR": false
                 }
             ]

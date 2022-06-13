@@ -5,7 +5,9 @@ using UnityEngine.InputSystem;
 
 public class playerscript : MonoBehaviour
 {
-
+    public GameObject[] hearts;
+    private int life;
+    
     //força do pulo
     [SerializeField]
     private float JumpForce;
@@ -34,7 +36,6 @@ public class playerscript : MonoBehaviour
     public float highscore;
     public Text highscoretxt;
 
-    public bool playertwo = false;
     private bool jumped;
     private bool crouching;
 
@@ -44,6 +45,7 @@ public class playerscript : MonoBehaviour
         animator = GetComponent<Animator>();
         score = 0;
         highscore = PlayerPrefs.GetFloat("Highscore");
+        life = hearts.Length;
     }
 
     public void onJump(InputAction.CallbackContext context)
@@ -61,19 +63,12 @@ public class playerscript : MonoBehaviour
         //pular
         if (jumped)
         {
-            if (isGrounded)
-            {
-                if (playertwo)
-                {
-                    RB.AddForce(Vector2.up * -JumpForce);
-                }
-                else
+                if (isGrounded && !crouching)
                 {
                     RB.AddForce(Vector2.up * JumpForce);
+                    isGrounded = false;
+                    animator.SetBool("isjumping", true);
                 }
-                isGrounded = false;
-                animator.SetBool("isjumping", true);
-            }
         }
         else
         {
@@ -92,19 +87,20 @@ public class playerscript : MonoBehaviour
             animator.SetBool("iscrouch", false);
         }
 
+        
+
+        if (score > highscore)
+        {
+            PlayerPrefs.SetFloat("Highscore", score);
+            highscoretxt.text = "HI : " + highscore.ToString("0000");
+        }
 
         //morto ou vivo?
         if (isAlive)
         {
             score += Time.deltaTime * 4;
             ScoreTxt.text = "Pontuação : " + score.ToString("0000");
-        }
-
-        highscoretxt.text = "Highscore : " + highscore.ToString("0000");
-
-        if (score > highscore)
-        {
-            PlayerPrefs.SetFloat("Highscore", score);
+            highscoretxt.text = "Highscore : " + highscore.ToString("0000");
         }
     }
 
@@ -118,21 +114,35 @@ public class playerscript : MonoBehaviour
                 isGrounded = true;
             }
         }
-        //colindo com obstaculo?
-        if (collision.gameObject.CompareTag("Obstacles"))
+        if(life >= 1)
         {
-            isAlive = false;
-            Time.timeScale = 0;
-            GameOverMenu.SetActive(true);
-        }
+          //colindo com obstaculo?
+            if (collision.gameObject.CompareTag("Obstacles"))
+            {
+                life -= 1;
+                Destroy(hearts[life].gameObject);
+                if(life <= 0)
+                {
+                    isAlive = false;
+                    Time.timeScale = 0;
+                    GameOverMenu.SetActive(true);
+                }
+            }
 
-        //colindo com obstacuko no ar?
-        if (collision.gameObject.CompareTag("AirObstacles"))
-        {
-            isAlive = false;
-            Time.timeScale = 0;
-            GameOverMenu.SetActive(true);
+            //colindo com obstacuko no ar?
+            if (collision.gameObject.CompareTag("AirObstacles"))
+            {
+                life -= 1;
+                Destroy(hearts[life].gameObject);
+                if (life <= 0)
+                {
+                    isAlive = false;
+                    Time.timeScale = 0;
+                    GameOverMenu.SetActive(true);
+                }
+            }
         }
+        
     }
 
 
