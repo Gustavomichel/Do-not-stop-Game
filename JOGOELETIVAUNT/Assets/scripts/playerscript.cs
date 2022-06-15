@@ -1,7 +1,6 @@
 using UnityEngine;
 using UnityEngine.UI;
 using UnityEngine.SceneManagement;
-using UnityEngine.InputSystem;
 
 public class playerscript : MonoBehaviour
 {
@@ -36,8 +35,9 @@ public class playerscript : MonoBehaviour
     public float highscore;
     public Text highscoretxt;
 
-    private bool jumped;
-    private bool crouching;
+
+    public bool playertwo = false;
+    private bool agachar;
 
     private void Awake()
     {
@@ -48,46 +48,71 @@ public class playerscript : MonoBehaviour
         life = hearts.Length;
     }
 
-    public void onJump(InputAction.CallbackContext context)
+    public void Jump()
     {
-        jumped = context.performed;
+        if (!playertwo)
+        {
+            //pular
+            if (Input.GetKeyDown(KeyCode.UpArrow))
+            {
+                   if (isGrounded && !agachar)
+                   {
+                       RB.AddForce(Vector2.up * JumpForce);
+                       isGrounded = false;
+                       animator.SetBool("isjumping", true);
+                   }
+            } 
+            else
+            {
+                animator.SetBool("isjumping", false);
+            }
+        }
+        else if (playertwo)
+        {
+            if (Input.GetKeyDown(KeyCode.W))
+            {
+                if (isGrounded && !agachar)
+                {
+                    RB.AddForce(Vector2.up * -JumpForce);
+                    isGrounded = false;
+                    animator.SetBool("isjumping", true);
+                }
+            }
+            else
+            {
+                animator.SetBool("isjumping", false);
+            }
+        }
+            
     }
-
-    public void onCrouch(InputAction.CallbackContext context)
+    public void Crouch()
     {
-        crouching = context.performed;
+        agachar = Input.GetKey(KeyCode.DownArrow);
+        if (playertwo)
+        {
+            agachar = Input.GetKey(KeyCode.S);
+        }
+        
+            //agachar
+            if (agachar && isGrounded)
+            {
+                
+                standingcollider.enabled = false;
+                animator.SetBool("iscrouch", true);
+            }
+            else
+            {
+                
+                standingcollider.enabled = true;
+                animator.SetBool("iscrouch", false);
+            }
+
     }
 
     void Update()
     {
-        //pular
-        if (jumped)
-        {
-                if (isGrounded && !crouching)
-                {
-                    RB.AddForce(Vector2.up * JumpForce);
-                    isGrounded = false;
-                    animator.SetBool("isjumping", true);
-                }
-        }
-        else
-        {
-            animator.SetBool("isjumping", false);
-        }
-
-        //agachar
-        if (crouching && isGrounded)
-        {
-            standingcollider.enabled = false;
-            animator.SetBool("iscrouch", true);
-        }
-        else
-        {
-            standingcollider.enabled = true;
-            animator.SetBool("iscrouch", false);
-        }
-
-        
+        Jump();
+        Crouch();
 
         if (score > highscore)
         {
