@@ -434,20 +434,20 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: 'GUSTAVO MICHEL - Programador
+  m_text: 'GUSTAVO MICHEL - PROGRAMADOR
 
 
-    DANIEL LIMA  - GAME DESiGNER
+    DANIEL LIMA  - GAME DESIGNER
 
 
     EDUARDO
-    - Sonoplastia
+    - SONOPLASTIA
 
 
     GABRIEL THIERRY - DESENHOS
 
 
-    KEVIN LEVI - PIXEL ART'
+    KEVIN LEVI - CENARIO'
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
   m_sharedMaterial: {fileID: 2180264, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
@@ -510,7 +510,7 @@ MonoBehaviour:
   m_VertexBufferAutoSizeReduction: 0
   m_useMaxVisibleDescender: 1
   m_pageToDisplay: 1
-  m_margin: {x: -701.77997, y: 0, z: -383.32532, w: 0}
+  m_margin: {x: -701.77997, y: 0, z: -582.8916, w: 0}
   m_isUsingLegacyAnimationComponent: 0
   m_isVolumetricText: 0
   m_hasFontAssetChanged: 0

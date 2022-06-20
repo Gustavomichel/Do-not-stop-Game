@@ -73,7 +73,7 @@ public class playerscript : MonoBehaviour
             {
                 if (isGrounded && !agachar)
                 {
-                    RB.AddForce(Vector2.up * -JumpForce);
+                    RB.AddForce(Vector2.up * JumpForce);
                     isGrounded = false;
                     animator.SetBool("isjumping", true);
                 }
@@ -154,7 +154,7 @@ public class playerscript : MonoBehaviour
                 }
             }
 
-            //colindo com obstacuko no ar?
+            //colindo com obstaculo no ar?
             if (collision.gameObject.CompareTag("AirObstacles"))
             {
                 life -= 1;

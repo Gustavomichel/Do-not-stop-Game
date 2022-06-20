@@ -6,7 +6,7 @@ using UnityEngine.SceneManagement;
 public class ChangeScene : MonoBehaviour
 {
     public string SceneName;
-    public bool p2 = true;
+    //public bool p2 = true;
 
     public void ChangeS()
     {
@@ -14,10 +14,10 @@ public class ChangeScene : MonoBehaviour
         
     }
 
-    public void multichosse()
+    /*public void multichosse()
     {
         p2 = false;
-    }
+    }*/
 
     public void Sair()
     {

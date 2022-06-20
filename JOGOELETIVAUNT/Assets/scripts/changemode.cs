@@ -4,7 +4,7 @@ using UnityEngine;
 
 public class changemode : MonoBehaviour
 {
-    ChangeScene cs;
+   /* ChangeScene cs;
     public GameObject world2;
     private void Awake()
     {
@@ -13,5 +13,5 @@ public class changemode : MonoBehaviour
         {
             world2.SetActive(false);
         }
-    }
+    }*/
 }

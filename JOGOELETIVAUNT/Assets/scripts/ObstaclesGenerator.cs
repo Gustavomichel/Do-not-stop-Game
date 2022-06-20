@@ -24,7 +24,7 @@ public class ObstaclesGenerator : MonoBehaviour
     public void GenerateNextObstacleWithGap()
     {
         //Randomize obstacles
-        float randomwait = Random.Range(0.0001f, 0.0002f);
+        float randomwait = Random.Range(0.00001f, 0.00002f);
         Invoke("GenerateObstacles", randomwait);
 
         //Sort obstacles
