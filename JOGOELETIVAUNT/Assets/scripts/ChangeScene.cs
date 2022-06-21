@@ -6,18 +6,23 @@ using UnityEngine.SceneManagement;
 public class ChangeScene : MonoBehaviour
 {
     public string SceneName;
-    //public bool p2 = true;
+    public static bool pm2 = true;
 
+
+    private void Awake()
+    {
+    }
     public void ChangeS()
     {
         SceneManager.LoadScene(SceneName);
         
     }
 
-    /*public void multichosse()
+    public void multichosse()
     {
-        p2 = false;
-    }*/
+        pm2 = false;
+
+    }
 
     public void Sair()
     {
