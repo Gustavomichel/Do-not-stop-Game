@@ -913,7 +913,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 911237818585824174, guid: c091a88e08c72f048a820adf499d6526, type: 3}
       propertyPath: m_LocalScale.x
-      value: 0.44445407
+      value: 0.4668056
       objectReference: {fileID: 0}
     - target: {fileID: 911237818585824174, guid: c091a88e08c72f048a820adf499d6526, type: 3}
       propertyPath: m_LocalScale.y
@@ -921,7 +921,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 911237818585824174, guid: c091a88e08c72f048a820adf499d6526, type: 3}
       propertyPath: m_LocalPosition.x
-      value: 19.7913
+      value: 19.8181
       objectReference: {fileID: 0}
     - target: {fileID: 911237818585824174, guid: c091a88e08c72f048a820adf499d6526, type: 3}
       propertyPath: m_LocalPosition.y
@@ -1564,11 +1564,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 4398539811942547999, guid: 721504bbebbbecf4ead1615b6eead355, type: 3}
       propertyPath: m_LocalScale.x
-      value: 0.3
+      value: 0.4
       objectReference: {fileID: 0}
     - target: {fileID: 4398539811942547999, guid: 721504bbebbbecf4ead1615b6eead355, type: 3}
       propertyPath: m_LocalScale.y
-      value: 0.79704
+      value: 0.6
       objectReference: {fileID: 0}
     - target: {fileID: 4398539811942547999, guid: 721504bbebbbecf4ead1615b6eead355, type: 3}
       propertyPath: m_LocalPosition.x
@@ -1809,7 +1809,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1031357526}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: -6.92, y: -1.85, z: -12.594304}
+  m_LocalPosition: {x: -7.62, y: -1.85, z: -12.594304}
   m_LocalScale: {x: 0.2, y: 2, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -2345,11 +2345,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 4398539811942547999, guid: 721504bbebbbecf4ead1615b6eead355, type: 3}
       propertyPath: m_LocalScale.x
-      value: 0.3
+      value: 0.4
       objectReference: {fileID: 0}
     - target: {fileID: 4398539811942547999, guid: 721504bbebbbecf4ead1615b6eead355, type: 3}
       propertyPath: m_LocalScale.y
-      value: 0.8
+      value: 0.6
       objectReference: {fileID: 0}
     - target: {fileID: 4398539811942547999, guid: 721504bbebbbecf4ead1615b6eead355, type: 3}
       propertyPath: m_LocalPosition.x
@@ -2565,34 +2565,13 @@ GameObject:
   - component: {fileID: 1697204277}
   - component: {fileID: 1697204276}
   - component: {fileID: 1697204275}
-  - component: {fileID: 1697204274}
   m_Layer: 0
   m_Name: playerTwo
   m_TagString: Player
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
---- !u!95 &1697204274
-Animator:
-  serializedVersion: 4
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1697204273}
-  m_Enabled: 0
-  m_Avatar: {fileID: 0}
-  m_Controller: {fileID: 9100000, guid: 88e0ae23790272f4d9289d52e0b86b22, type: 2}
-  m_CullingMode: 0
-  m_UpdateMode: 0
-  m_ApplyRootMotion: 0
-  m_LinearVelocityBlending: 0
-  m_StabilizeFeet: 0
-  m_WarningMessage: 
-  m_HasTransformHierarchy: 1
-  m_AllowConstantClipSamplingOptimization: 1
-  m_KeepAnimatorControllerStateOnDisable: 0
+  m_IsActive: 0
 --- !u!114 &1697204275
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -2612,7 +2591,7 @@ MonoBehaviour:
   score: 0
   isGrounded: 0
   standingcollider: {fileID: 1697204278}
-  animator: {fileID: 1697204274}
+  animator: {fileID: 0}
   GameOverMenu: {fileID: 169206584}
   ScoreTxt: {fileID: 1332494986}
   highscore: 0
@@ -2652,8 +2631,8 @@ CapsuleCollider2D:
   m_IsTrigger: 0
   m_UsedByEffector: 0
   m_UsedByComposite: 0
-  m_Offset: {x: -0.023579564, y: -0.08832844}
-  m_Size: {x: 0.19326717, y: 0.19773746}
+  m_Offset: {x: -0.019001871, y: -0.08757278}
+  m_Size: {x: 0.14748904, y: 0.19622613}
   m_Direction: 0
 --- !u!70 &1697204278
 CapsuleCollider2D:
@@ -2887,7 +2866,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 2023133246}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -9.06, y: -3.62, z: 0}
+  m_LocalPosition: {x: -10, y: -3.62, z: 0}
   m_LocalScale: {x: 0.2, y: 2, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -3280,7 +3259,7 @@ Animator:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 3518140119724766316}
-  m_Enabled: 0
+  m_Enabled: 1
   m_Avatar: {fileID: 0}
   m_Controller: {fileID: 9100000, guid: 88e0ae23790272f4d9289d52e0b86b22, type: 2}
   m_CullingMode: 0
@@ -3305,8 +3284,8 @@ CapsuleCollider2D:
   m_IsTrigger: 0
   m_UsedByEffector: 0
   m_UsedByComposite: 0
-  m_Offset: {x: -0.018415937, y: -0.09006526}
-  m_Size: {x: 0.20598456, y: 0.20400709}
+  m_Offset: {x: -0.0186201, y: -0.08733485}
+  m_Size: {x: 0.14625277, y: 0.19854628}
   m_Direction: 0
 --- !u!70 &3518140119724766310
 CapsuleCollider2D:

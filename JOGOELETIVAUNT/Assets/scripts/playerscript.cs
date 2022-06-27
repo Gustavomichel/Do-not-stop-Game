@@ -59,13 +59,8 @@ public class playerscript : MonoBehaviour
                    {
                        RB.AddForce(Vector2.up * JumpForce);
                        isGrounded = false;
-                       animator.SetBool("isjumping", true);
                    }
             } 
-            else
-            {
-                animator.SetBool("isjumping", false);
-            }
         }
         else if (playertwo)
         {
@@ -75,12 +70,7 @@ public class playerscript : MonoBehaviour
                 {
                     RB.AddForce(Vector2.up * JumpForce);
                     isGrounded = false;
-                    animator.SetBool("isjumping", true);
                 }
-            }
-            else
-            {
-                animator.SetBool("isjumping", false);
             }
         }
             
