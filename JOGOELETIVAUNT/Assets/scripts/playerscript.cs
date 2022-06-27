@@ -174,7 +174,7 @@ public class playerscript : MonoBehaviour
     //menu de restart, para o menu.
     public void RestartLevel()
     {
-        SceneManager.LoadScene(1);
+        SceneManager.LoadScene(2);
         Time.timeScale = 1;
     }
 
