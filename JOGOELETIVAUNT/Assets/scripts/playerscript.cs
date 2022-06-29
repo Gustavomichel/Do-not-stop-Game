@@ -30,6 +30,7 @@ public class playerscript : MonoBehaviour
     //texto e menu
     [Header("Texts and menus")]
     public GameObject GameOverMenu;
+    public GameObject pause;
     public Text ScoreTxt;
     [HideInInspector]
     public float highscore;
@@ -48,6 +49,14 @@ public class playerscript : MonoBehaviour
         life = hearts.Length;
     }
 
+    public void Pause()
+    {
+        if (Input.GetKeyDown(KeyCode.Escape))
+        {
+            pause.SetActive(true);
+            Time.timeScale = 0;
+        }
+    }
     public void Jump()
     {
         if (!playertwo)
@@ -92,7 +101,7 @@ public class playerscript : MonoBehaviour
             }
             else
             {
-                
+
                 standingcollider.enabled = true;
                 animator.SetBool("iscrouch", false);
             }
@@ -103,6 +112,7 @@ public class playerscript : MonoBehaviour
     {
         Jump();
         Crouch();
+        Pause();
 
         if (score > highscore)
         {
@@ -162,6 +172,12 @@ public class playerscript : MonoBehaviour
 
 
     //menu de restart, para o menu.
+
+    public void ResumeLevel()
+    {
+        pause.SetActive(false);
+        Time.timeScale = 1;
+    }
     public void RestartLevel()
     {
         SceneManager.LoadScene(2);
